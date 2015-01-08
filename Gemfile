@@ -11,6 +11,7 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
@@ -20,6 +21,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
@@ -29,7 +32,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
