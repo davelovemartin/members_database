@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  first_name: MyString
+  last_name: MyString
+  address: MyString
+  post_code: MyString
+  home_telephone_number: MyString
+  mobile_telephone_number: MyString
+  email: MyString
+  website: MyString
+  age_group: MyString
+  term_address: MyString
+  term_post_code: MyString
+  coffee: false
+  projector: false
+  data_collection: false
+  stewarding: false
+  picture_hanging: false
+  portering: false
+  general: false
+  website_social_media: false
+  painting_sessions: false
+  committee_member: false
+  general_help: false
+  online_and_email: false
+  post: false
+
+two:
+  title: MyString
+  first_name: MyString
+  last_name: MyString
+  address: MyString
+  post_code: MyString
+  home_telephone_number: MyString
+  mobile_telephone_number: MyString
+  email: MyString
+  website: MyString
+  age_group: MyString
+  term_address: MyString
+  term_post_code: MyString
+  coffee: false
+  projector: false
+  data_collection: false
+  stewarding: false
+  picture_hanging: false
+  portering: false
+  general: false
+  website_social_media: false
+  painting_sessions: false
+  committee_member: false
+  general_help: false
+  online_and_email: false
+  post: false
