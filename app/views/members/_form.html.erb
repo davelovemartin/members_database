@@ -10,108 +10,243 @@
       </ul>
     </div>
   <% end %>
+<form role="form">
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :title %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-5">
+      <%= f.text_field :title, :size => nil, :placeholder => 'Title', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :post_code %><br />
-    <%= f.text_field :post_code %>
-  </div>
-  <div class="field">
-    <%= f.label :home_telephone_number %><br />
-    <%= f.text_field :home_telephone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :mobile_telephone_number %><br />
-    <%= f.text_field :mobile_telephone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :website %><br />
-    <%= f.text_field :website %>
-  </div>
-  <div class="field">
-    <%= f.label :age_group %><br />
-    <%= f.text_field :age_group %>
-  </div>
-  <div class="field">
-    <%= f.label :term_address %><br />
-    <%= f.text_field :term_address %>
-  </div>
-  <div class="field">
-    <%= f.label :term_post_code %><br />
-    <%= f.text_field :term_post_code %>
-  </div>
-  <div class="field">
-    <%= f.label :coffee %><br />
-    <%= f.check_box :coffee %>
-  </div>
-  <div class="field">
-    <%= f.label :projector %><br />
-    <%= f.check_box :projector %>
-  </div>
-  <div class="field">
-    <%= f.label :data_collection %><br />
-    <%= f.check_box :data_collection %>
-  </div>
-  <div class="field">
-    <%= f.label :stewarding %><br />
-    <%= f.check_box :stewarding %>
-  </div>
-  <div class="field">
-    <%= f.label :picture_hanging %><br />
-    <%= f.check_box :picture_hanging %>
-  </div>
-  <div class="field">
-    <%= f.label :portering %><br />
-    <%= f.check_box :portering %>
-  </div>
-  <div class="field">
-    <%= f.label :general %><br />
-    <%= f.check_box :general %>
-  </div>
-  <div class="field">
-    <%= f.label :website_social_media %><br />
-    <%= f.check_box :website_social_media %>
-  </div>
-  <div class="field">
-    <%= f.label :painting_sessions %><br />
-    <%= f.check_box :painting_sessions %>
-  </div>
-  <div class="field">
-    <%= f.label :committee_member %><br />
-    <%= f.check_box :committee_member %>
-  </div>
-  <div class="field">
-    <%= f.label :general_help %><br />
-    <%= f.check_box :general_help %>
-  </div>
-  <div class="field">
-    <%= f.label :online_and_email %><br />
-    <%= f.check_box :online_and_email %>
-  </div>
-  <div class="field">
-    <%= f.label :post %><br />
-    <%= f.check_box :post %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :first_name %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-5">
+      <%= f.text_field :first_name, :size => nil, :placeholder => 'First name', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :last_name %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-5">
+      <%= f.text_field :last_name, :size => nil, :placeholder => 'Last name', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :address %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-6">
+      <%= f.text_field :address, :size => nil, :placeholder => 'Address', :class => 'form-control' %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-2">
+      <%= f.label :post_code %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-2">
+      <%= f.text_field :post_code, :size => nil, :placeholder => 'Postcode', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :home_telephone_number %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-4">
+      <%= f.text_field :home_telephone_number, :size => nil, :placeholder => 'Home telephone number', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :mobile_telephone_number %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-4">
+      <%= f.text_field :mobile_telephone_number, :size => nil, :placeholder => 'Mobile telephone number', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :email %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-6">
+      <%= f.text_field :email, :size => nil, :placeholder => 'E-mail', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :website %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-6">
+      <%= f.text_field :website, :size => nil, :placeholder => 'Website', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :age_group %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-4">
+      <%= f.text_field :age_group, :size => nil, :placeholder => 'Age group', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :term_address %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-6">
+      <%= f.text_field :term_address, :size => nil, :placeholder => 'Term-time address', :class => 'form-control' %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-2">
+      <%= f.label :term_post_code %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-2">
+      <%= f.text_field :term_post_code, :size => nil, :placeholder => 'Term-time postcode', :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>Thursdays:</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.label :coffee %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :coffee %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.label :projector %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :projector %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>Annual Exhibition:</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.label :data_collection %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :data_collection %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.label :stewarding %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :stewarding %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+  
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>&nbsp;</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.label :picture_hanging %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :picture_hanging %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.label :portering %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :portering %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.label :general %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :general %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>&nbsp;</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-3">
+      <%= f.label :website_social_media %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :website_social_media %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-3">
+      <%= f.label :painting_sessions %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :painting_sessions %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>&nbsp;</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-3">
+      <%= f.label :committee_member %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :committee_member %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-3">
+      <%= f.label :general_help %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :general_help %>
+      </div><!-- end of col -->
+    </div><!-- end of row -->
+  <div class="row">
+    <hr>
+    </div><!-- end of row -->
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>&nbsp;</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-2">
+        <%= f.label :online_and_email %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+        <%= f.check_box :online_and_email %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.label :post %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :post %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
+</form>
+<div class="row">
+  <div class="col-md-offset-10 col-md-1">
+    <%= f.submit  "Save", class: "btn btn-lg btn-success" %>
+  </div><!-- end of col -->
+    
 <% end %>

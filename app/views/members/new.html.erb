@@ -1,5 +1,14 @@
-<h1>New member</h1>
+	<div class="row">
+		<h1>Create Member</h1>
+		<p>This is a quick and simple form for entering Member's details into the database.</p>
+	</div><!-- end of row -->
+	<div class="row">
+	<hr>
+	</div><!-- end of row -->
 
-<%= render 'form' %>
+	<%= render 'form' %>
 
-<%= link_to 'Back', members_path %>
+		<div class="col-md-1">
+			<%= link_to 'Cancel', members_path, class: 'btn btn-lg btn-default' %>
+    	</div><!-- end of col -->     
+    </div><!-- end of row _form.html.erb -->

@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MembersDatabase</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+ 	<title>Clifton Arts Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="/favicon.gif" />
+
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<%= render 'shared/navigation' %>
+
+	<div id="wrapper" class="container">
+		<div class="container-fluid">
+
+	<%= yield %>
+
+		</div><!-- end of .container-fluid -->
+	</div><!-- end of #wrapper -->
+	<footer style="height: 3em"></footer>
 
 </body>
 </html>
