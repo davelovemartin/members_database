@@ -1,6 +1,14 @@
-<h1>Editing member</h1>
+	<div class="row">
+    	<h1>Edit Member</h1>
+    	<p>This is a quick and simple form for editing Members in the database.</p>
+  	</div><!-- end of row -->
+  	<div class="row">
+    	<hr>
+  	</div><!-- end of row -->
+	<%= render 'form' %>
 
-<%= render 'form' %>
+		<div class="col-md-1">
+			<%= link_to 'Cancel', members_path , class: 'btn btn-lg btn-default', data: { confirm: 'Are you sure?' }%>
+    	</div><!-- end of col -->     
+    </div><!-- end of row _form.html.erb -->
 
-<%= link_to 'Show', @member %> |
-<%= link_to 'Back', members_path %>

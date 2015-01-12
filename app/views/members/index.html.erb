@@ -1,71 +1,33 @@
-<h1>Listing members</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Address</th>
-    <th>Post code</th>
-    <th>Home telephone number</th>
-    <th>Mobile telephone number</th>
-    <th>Email</th>
-    <th>Website</th>
-    <th>Age group</th>
-    <th>Term address</th>
-    <th>Term post code</th>
-    <th>Coffee</th>
-    <th>Projector</th>
-    <th>Data collection</th>
-    <th>Stewarding</th>
-    <th>Picture hanging</th>
-    <th>Portering</th>
-    <th>General</th>
-    <th>Website social media</th>
-    <th>Painting sessions</th>
-    <th>Committee member</th>
-    <th>General help</th>
-    <th>Online and email</th>
-    <th>Post</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div class="row">
+        <div class="col-md-9">
+            <h1>Members</h1>
+            <p>This is list of Members in the database.</p>
+        </div>
+        <div class="col-md-3">
+            <br>
+            <%= link_to 'Create Member', new_member_path, class:'btn btn-lg btn-primary' %>
+        </div>
+    </div><!-- end of row -->
+    <div class="row">
+        <hr>
+    </div><!-- end of row -->
+    <div class="row">
+        <hr>
+    </div><!-- end of row -->
 <% @members.each do |member| %>
-  <tr>
-    <td><%= member.title %></td>
-    <td><%= member.first_name %></td>
-    <td><%= member.last_name %></td>
-    <td><%= member.address %></td>
-    <td><%= member.post_code %></td>
-    <td><%= member.home_telephone_number %></td>
-    <td><%= member.mobile_telephone_number %></td>
-    <td><%= member.email %></td>
-    <td><%= member.website %></td>
-    <td><%= member.age_group %></td>
-    <td><%= member.term_address %></td>
-    <td><%= member.term_post_code %></td>
-    <td><%= member.coffee %></td>
-    <td><%= member.projector %></td>
-    <td><%= member.data_collection %></td>
-    <td><%= member.stewarding %></td>
-    <td><%= member.picture_hanging %></td>
-    <td><%= member.portering %></td>
-    <td><%= member.general %></td>
-    <td><%= member.website_social_media %></td>
-    <td><%= member.painting_sessions %></td>
-    <td><%= member.committee_member %></td>
-    <td><%= member.general_help %></td>
-    <td><%= member.online_and_email %></td>
-    <td><%= member.post %></td>
-    <td><%= link_to 'Show', member %></td>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            <p><%= member.first_name %>&nbsp;<%= member.last_name %></p>
+        </div>
+        <div class="col-md-1">
+            <%= link_to 'View', member, class: 'btn btn-xs btn-success' %>
+        </div><!-- end of col -->           
+        <div class="col-md-1">
+            <%= link_to 'Edit', edit_member_path(member), class: 'btn btn-xs btn-warning' %></td>
+        </div><!-- end of col -->           
+        <div class="col-md-1">
+            <%= link_to 'Delete', member, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
+        </div><!-- end of col -->
+    </div><!-- end of row -->          
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Member', new_member_path %>
+</div>

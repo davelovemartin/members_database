@@ -1,130 +1,260 @@
-<p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-md-9">
+      <h1>View Member</h1>
+      <p>This is the data for <%= @member.first_name %> <%= @member.last_name %>.</p>
+    </div>
+    <div class="col-md-1">
+        <br>
+      <%= link_to 'Edit', edit_member_path(@member), class: "btn btn-lg btn-warning" %>
+    </div><!-- end of col -->
+    <div class="col-md-1">
+        <br>
+        <%= link_to 'Back', members_path, class: "btn btn-lg btn-default" %>
+    </div><!-- end of col -->     
+  </div><!-- end of row -->
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
 
-<p>
-  <b>Title:</b>
-  <%= @member.title %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>Title</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-5">
+      <%= @member.title %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>First name:</b>
-  <%= @member.first_name %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>First name</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-5">
+      <%= @member.first_name %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Last name:</b>
-  <%= @member.last_name %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>Last name</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-5">
+      <%= @member.last_name %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Address:</b>
-  <%= @member.address %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>Address</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-6">
+      <%= @member.address %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-2">
+      <label>Postcode</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-2">
+      <%= @member.post_code %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Post code:</b>
-  <%= @member.post_code %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>Home telephone number</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-4">
+      <%= @member.home_telephone_number %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Home telephone number:</b>
-  <%= @member.home_telephone_number %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>Mobile telephone number</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-4">
+      <%= @member.mobile_telephone_number %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Mobile telephone number:</b>
-  <%= @member.mobile_telephone_number %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>E-mail</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-6">
+      <%= @member.email %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Email:</b>
-  <%= @member.email %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>Website</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-6">
+      <%= @member.website %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Website:</b>
-  <%= @member.website %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>Age group</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-4">
+      <%= @member.age_group %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Age group:</b>
-  <%= @member.age_group %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <label>Term address</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-6">
+      <%= @member.term_address %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-2">
+      <label>Term postcode</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-2">
+      <%= @member.term_post_code %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Term address:</b>
-  <%= @member.term_address %>
-</p>
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
 
-<p>
-  <b>Term post code:</b>
-  <%= @member.term_post_code %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>Thursdays:</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <label>Coffee</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "coffee", {:checked => @member.coffee, :disabled => true} %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <label>Projector</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "projector", {:checked => @member.projector, :disabled => true} %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Coffee:</b>
-  <%= @member.coffee %>
-</p>
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
 
-<p>
-  <b>Projector:</b>
-  <%= @member.projector %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>Annual exhibition:</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <label>Data collection</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "data_collection", {:checked => @member.data_collection, :disabled => true} %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <label>Stewarding</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "stewarding", {:checked => @member.stewarding, :disabled => true} %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+  
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>&nbsp;</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <label>Picture hanging</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "picture_hanging", {:checked => @member.picture_hanging, :disabled => true} %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <label>Portering</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "portering", {:checked => @member.portering, :disabled => true} %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <label>General</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "general", {:checked => @member.general, :disabled => true} %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Data collection:</b>
-  <%= @member.data_collection %>
-</p>
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
 
-<p>
-  <b>Stewarding:</b>
-  <%= @member.stewarding %>
-</p>
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>&nbsp;</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-3">
+      <label>Website/Social media</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "website_social_media", {:checked => @member.website_social_media, :disabled => true} %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-3">
+      <label>Painting sessions</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "painting_sessions", {:checked => @member.painting_sessions, :disabled => true} %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
 
-<p>
-  <b>Picture hanging:</b>
-  <%= @member.picture_hanging %>
-</p>
-
-<p>
-  <b>Portering:</b>
-  <%= @member.portering %>
-</p>
-
-<p>
-  <b>General:</b>
-  <%= @member.general %>
-</p>
-
-<p>
-  <b>Website social media:</b>
-  <%= @member.website_social_media %>
-</p>
-
-<p>
-  <b>Painting sessions:</b>
-  <%= @member.painting_sessions %>
-</p>
-
-<p>
-  <b>Committee member:</b>
-  <%= @member.committee_member %>
-</p>
-
-<p>
-  <b>General help:</b>
-  <%= @member.general_help %>
-</p>
-
-<p>
-  <b>Online and email:</b>
-  <%= @member.online_and_email %>
-</p>
-
-<p>
-  <b>Post:</b>
-  <%= @member.post %>
-</p>
-
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>&nbsp;</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-3">
+      <label>Committee member</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "committee_member", {:checked => @member.committee_member, :disabled => true} %>
+      </div><!-- end of col -->
+    <div class="form-group col-md-3">
+      <label>General help</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "general_help", {:checked => @member.general_help, :disabled => true} %>
+      </div><!-- end of col -->
+    </div><!-- end of row -->
+  <div class="row">
+    <hr>
+    </div><!-- end of row -->
+  <div class="row">
+    <div class="form-group col-md-2">
+        <label>Contact:</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-2">
+        <label>Online and email</label>
+      </div><!-- end of col -->
+    <div class="form-group col-md-1">
+        <%= check_box "member", "online_and_email", {:checked => @member.online_and_email, :disabled => true} %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <label>By post</label>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= check_box "member", "post", {:checked => @member.post, :disabled => true} %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
+  <div class="row">
+    <div class="col-md-offset-9 col-md-1">
+      <%= link_to 'Edit', edit_member_path(@member), class: "btn btn-lg btn-warning" %>
+    </div><!-- end of col -->
+    <div class="col-md-1">
+      <%= link_to 'Back', members_path, class: "btn btn-lg btn-default" %>
+    </div><!-- end of col -->

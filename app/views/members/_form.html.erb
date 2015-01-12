@@ -94,7 +94,7 @@
       <%= f.label :age_group %>
     </div><!-- end of col -->
     <div class="form-group col-md-4">
-      <%= f.text_field :age_group, :size => nil, :placeholder => 'Age group', :class => 'form-control' %>
+      <%= f.select :age_group, ['Under 30','31-50','51-70','Over 70'], :prompt => 'Select One' %>
     </div><!-- end of col -->
   </div><!-- end of row -->
 
@@ -225,7 +225,7 @@
     </div><!-- end of row -->
   <div class="row">
     <div class="form-group col-md-2">
-        <label>&nbsp;</label>
+        <label>Contact:</label>
       </div><!-- end of col -->
     <div class="form-group col-md-2">
         <%= f.label :online_and_email %>
@@ -243,10 +243,10 @@
   <div class="row">
     <hr>
   </div><!-- end of row -->
-</form>
-<div class="row">
-  <div class="col-md-offset-10 col-md-1">
-    <%= f.submit  "Save", class: "btn btn-lg btn-success" %>
-  </div><!-- end of col -->
-    
+  <div class="row">
+    <div class="col-md-offset-9 col-md-1">
+      <%= f.submit  "Save", class: "btn btn-lg btn-success" %>
+    </div><!-- end of col -->
+  </form>
+  
 <% end %>

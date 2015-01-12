@@ -5,38 +5,25 @@ class Member < ActiveRecord::Base
 
   validates :address, 						:length => { :in => 6..255 }, 
   											:allow_blank => true
-  validates :age_group, 					:length => { :in => 6..20 }, 
+  validates :age_group, 					:length => { :in => 1..20 }, 
   											:allow_blank => true
-  validates :coffee,						:presence => true
-  validates :committee_member,				:presence => true
-  validates :data_collection,				:presence => true
-  validates :email,							:length => { :in => 6..255 }
+  validates :email,							:length => { :in => 5..255 }
   validates :first_name, 					:presence => true,
-  			 								:length => { :in => 6..20 }
-  validates :general,						:presence => true
-  validates :general_help,					:presence => true
-  validates :home_telephone_number,			:length => { :in => 6..11 }, 
+  			 								:length => { :in => 1..20 }
+  validates :home_telephone_number,			:length => { :in => 1..11 }, 
   			 								:allow_blank => true
 
   validates :last_name, 					:presence => true
-  validates :mobile_telephone_number, 		:length => { :in => 6..11 }, 
+  validates :mobile_telephone_number, 		:length => { :in => 1..11 }, 
   			 								:allow_blank => true
-  validates :online_and_email,				:presence => true
-  validates :painting_sessions,				:presence => true
-  validates :picture_hanging,				:presence => true
-  validates :portering,						:presence => true
-  validates :post,							:presence => true
   validates :post_code,						:length => { :in => 6..10 }, 
   			 								:allow_blank => true
-  validates :projector,						:presence => true
-  validates :stewarding,					:presence => true
-  validates :term_address,					:length => { :in => 6..255 }, 
+  validates :term_address,					:length => { :in => 0..255 }, 
   			 								:allow_blank => true
   validates :term_post_code,				:length => { :in => 6..10 }, 
   			 								:allow_blank => true
-  validates :title,							:length => { :in => 6..10 }, 
+  validates :title,							:length => { :in => 0..10 }, 
   			 								:allow_blank => true
-  validates :website,						:length => { :in => 6..255 }, 
+  validates :website,						:length => { :in => 0..255 }, 
   											:allow_blank => true				
-  validates :website_social_media,			:presence => true
 end

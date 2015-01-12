@@ -44,7 +44,8 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.save
-        format.html { redirect_to @member, notice: 'Member was successfully created.' }
+        flash[:success] = 'Member was successfully created.'
+        format.html { redirect_to @member }
         format.json { render json: @member, status: :created, location: @member }
       else
         format.html { render action: "new" }
@@ -60,7 +61,8 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.update_attributes(params[:member])
-        format.html { redirect_to @member, notice: 'Member was successfully updated.' }
+        flash[:success] = 'Member was successfully updated.'
+        format.html { redirect_to @member }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,6 +78,7 @@ class MembersController < ApplicationController
     @member.destroy
 
     respond_to do |format|
+      flash[:success] = 'Member was successfully deleted.'
       format.html { redirect_to members_url }
       format.json { head :no_content }
     end
