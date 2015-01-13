@@ -1,0 +1,53 @@
+  <div class="row">
+    <h1>Sign in</h1>
+    <p>Access the Clifton Arts Club Members' database.</p>
+</div><!-- end of row -->
+<div class="row">
+  <hr>
+</div><!-- end of row -->
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :email %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-4">
+      <%= f.email_field :email, autofocus: true, :size => nil, :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :password %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-4">
+      <%= f.password_field :password, autocomplete: "off", :size => nil, :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+  <% if devise_mapping.rememberable? -%>
+  <div class="row">
+    <div class="form-group col-md-2">
+      <%= f.label :remember_me %>
+    </div><!-- end of col -->
+    <div class="form-group col-md-1">
+      <%= f.check_box :remember_me %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+  <% end -%>
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-2">
+      <%= f.submit "Sign in", class: 'btn btn-lg btn-success' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+  
+<% end %>
+  <div class="row">
+    <hr>
+  </div><!-- end of row -->
+  <div class="row">
+    <div class="col-md-offset-2 col-md-2">
+      <%= render "devise/shared/links" %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+    

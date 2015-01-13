@@ -1,4 +1,6 @@
 class MembersController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /members
   # GET /members.json
   def index

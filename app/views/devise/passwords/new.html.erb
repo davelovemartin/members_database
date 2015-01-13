@@ -1,0 +1,36 @@
+<div class="row">
+  <h1>Forgot your password?</h1>
+  <p>Access the Clifton Arts Club Members' database.</p>
+</div><!-- end of row -->
+<div class="row">
+  <hr>
+</div><!-- end of row -->
+
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+    <div class="row">
+      <div class="form-group col-md-2">
+        <%= f.label :email %>
+    </div><!-- end of col -->
+      <div class="form-group col-md-4">
+      <%= f.email_field :email, autofocus: true, :size => nil, :class => 'form-control' %>
+    </div><!-- end of col -->
+  </div><!-- end of row -->
+
+    <div class="row">
+      <div class="col-md-offset-2 col-md-2">
+        <%= f.submit "Send me reset password instructions", class: 'btn btn-lg btn-success' %>
+      </div><!-- end of col -->
+    </div><!-- end of row -->
+<% end %>
+<div class="row">
+  <hr>
+</div><!-- end of row -->
+<div class="row">
+  <div class="col-md-offset-2 col-md-2">
+    <%= render "devise/shared/links" %>
+    </div><!-- end of col -->
+</div><!-- end of row -->
+
