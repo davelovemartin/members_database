@@ -8,6 +8,7 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.csv { send_data Member.to_csv }
       format.json { render json: @members }
     end
   end
