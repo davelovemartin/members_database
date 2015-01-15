@@ -52,6 +52,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
+    excon (0.43.0)
     execjs (2.2.2)
     hike (1.2.3)
     i18n (0.6.1)
@@ -64,6 +65,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mandrill-api (1.0.53)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
     mime-types (1.25.1)
     multi_json (1.10.1)
     orm_adapter (0.5.0)
@@ -134,6 +138,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   jquery-rails
+  mandrill-api
   pg
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
