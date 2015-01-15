@@ -2,8 +2,11 @@ MembersDatabase::Application.routes.draw do
   devise_for :users
 
   resources :members
-
-
+  
+  resources :users_admin, :controller => 'users'
+  
+  match '/users_admin/:id', :to => 'users#show', :as => :user  
+  
   get "home/index"
 
   # The priority is based upon order of creation:

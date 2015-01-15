@@ -1,0 +1,45 @@
+	<div class="row">
+    	<h1>Edit User</h1>
+    	<p>This is a form for editing the administrators of the database.</p>
+  	</div><!-- end of row -->
+  	<div class="row">
+    	<hr>
+  	</div><!-- end of row -->
+  	<%= form_for @user, url: users_admin_path(@user) do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  <form role="form">
+    <div class="row">
+      <div class="form-group col-md-2">
+        <%= f.label :email %>
+      </div><!-- end of col -->
+      <div class="form-group col-md-6">
+        <%= f.text_field :email, :size => nil, :placeholder => 'E-mail', :class => 'form-control' %>
+      </div><!-- end of col -->
+    </div><!-- end of row -->
+    <div class="row">
+      <hr>
+    </div><!-- end of row -->
+    <div class="row">
+      <div class="col-md-offset-9 col-md-1">
+        <%= f.submit  "Save", class: "btn btn-lg btn-success" %>
+      </div><!-- end of col -->
+      <div class="col-md-1">
+      <%= link_to 'Cancel', users_admin_index_path , class: 'btn btn-lg btn-default', data: { confirm: 'Are you sure?' }%>
+      </div><!-- end of col -->     
+    </div><!-- end of row _form.html.erb -->
+  </form>
+  
+<% end %>
+
+		  
+

@@ -1,0 +1,30 @@
+<div class="row">
+        <div class="col-md-9">
+            <h1>Admins</h1>
+            <p>This is list of email addresses with access to the database.</p>
+        </div>
+        <div class="col-md-3">
+            <br>
+            <%= link_to 'Create Admin', new_users_admin_path, class:'btn btn-lg btn-primary' %>
+        </div>
+    </div><!-- end of row -->
+    <div class="row">
+        <hr>
+    </div><!-- end of row -->
+    <div class="row">
+        <hr>
+    </div><!-- end of row -->
+<% @users.each do |user| %>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            <p><%= user.email %></p>
+        </div>
+        <div class="col-md-1">
+            <%= link_to 'Edit', edit_users_admin_path(user), class: 'btn btn-xs btn-warning' %></td>
+        </div><!-- end of col -->   
+        <div class="col-md-1">
+          <%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %>
+        </div><!-- end of col -->   
+    </div><!-- end of row -->          
+<% end %>
+</div>
