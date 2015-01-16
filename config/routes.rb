@@ -1,4 +1,11 @@
 MembersDatabase::Application.routes.draw do
+  get "reports/", :to => "reports#index", :as => :reports
+
+
+  get "reports/labels"
+
+  get "reports/list"
+
   devise_for :users
 
   resources :members
