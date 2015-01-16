@@ -77,6 +77,8 @@ GEM
     prawn (1.3.0)
       pdf-core (~> 0.4.0)
       ttfunk (~> 1.4.0)
+    prawn-labels (0.11.5.0)
+      prawn (>= 0.12.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -146,6 +148,7 @@ DEPENDENCIES
   mandrill-api
   pg
   prawn
+  prawn-labels
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

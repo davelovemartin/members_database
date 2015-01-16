@@ -3,7 +3,7 @@ class ListPdf < Prawn::Document
 		super()
 		@members = members
 
-		pad_bottom(20) { text "Clifton Arts Club Membership", size: 30, style: :bold }
+		pad_bottom(20) { text "Clifton Arts Club Membership", size: 30, style: :bold }	
 
 		@members.each do |member|
 			pad_bottom(20) {

@@ -27,7 +27,7 @@ gem 'jquery-rails'
 gem 'attribute-defaults'
 gem 'mandrill-api'
 gem 'prawn'
-
+gem "prawn-labels"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
