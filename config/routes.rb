@@ -1,19 +1,23 @@
 MembersDatabase::Application.routes.draw do
   get "reports/", :to => "reports#index", :as => :reports
 
-
   get "reports/labels"
 
   get "reports/list"
-
-  devise_for :users
 
   resources :members
   
   resources :users_admin, :controller => 'users'
   
-  match '/users_admin/:id', :to => 'users#show', :as => :user  
-  
+  match '/users_admin/:id', :to => 'users#show', :as => :user
+
+  devise_for :users, :skip => [:registrations]                                          
+    as :user do
+      get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'    
+    end
+
+  match '/users/sign_up', :to => 'home#index'
+
   get "home/index"
 
   # The priority is based upon order of creation:
