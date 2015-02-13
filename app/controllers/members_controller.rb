@@ -48,11 +48,13 @@ class MembersController < ApplicationController
     respond_to do |format|
       if @member.save
         flash[:success] = 'Member was successfully created.'
-        format.html { redirect_to @member }
-        format.json { render json: @member, status: :created, location: @member }
+        if params[:commit] == 'Save'
+          format.html { redirect_to @member }
+        else
+          format.html { redirect_to :action => 'new' }
+        end
       else
         format.html { render action: "new" }
-        format.json { render json: @member.errors, status: :unprocessable_entity }
       end
     end
   end

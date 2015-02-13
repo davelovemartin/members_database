@@ -8,9 +8,9 @@ class Member < ActiveRecord::Base
   validates :age_group, :length => { :in => 1..20 }, :allow_blank => true
   validates :email, :length => { :in => 5..255 }
   validates :first_name, :presence => true, :length => { :in => 1..20 }
-  validates :home_telephone_number, :length => { :in => 1..11 }, :allow_blank => true
+  validates :home_telephone_number, :length => { :in => 1..14 }, :allow_blank => true
   validates :last_name, :presence => true
-  validates :mobile_telephone_number, :length => { :in => 1..11 }, :allow_blank => true
+  validates :mobile_telephone_number, :length => { :in => 1..14 }, :allow_blank => true
   validates :post_code, :length => { :in => 6..10 }, :allow_blank => true
   validates :term_address, :length => { :in => 0..255 }, :allow_blank => true
   validates :term_post_code, :length => { :in => 6..10 }, :allow_blank => true

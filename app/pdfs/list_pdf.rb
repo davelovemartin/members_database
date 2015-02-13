@@ -10,6 +10,8 @@ class ListPdf < Prawn::Document
 				text "#{member.first_name} #{member.last_name}"
 				text "#{member.address}"
 				text "#{member.post_code}"
+				text "#{member.home_telephone_number}"
+				text "#{member.email}"
 			}
 		end	
 	end
