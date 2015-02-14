@@ -51,6 +51,7 @@ class MembersController < ApplicationController
         if params[:commit] == 'Save'
           format.html { redirect_to @member }
         else
+          #save and go to next new entry
           format.html { redirect_to :action => 'new' }
         end
       else

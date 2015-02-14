@@ -1,2 +1,11 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+Application for Clifton Arts Club Members
+
+CRUD database for Members
+Includes report facility: 
+
+List of Members with specific fields - see app/pdfs/list_pdf.rb
+Address Labels for Members - see app/pdfs/labels_pdf.rb
+
+CRUD database/Log in system for Users - access to the Members database
+
+User #1 see DB creator!

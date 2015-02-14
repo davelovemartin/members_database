@@ -1,0 +1,23 @@
+Sat, 14 Feb 2015 13:41:45 +0000
+doc/README_FOR_APP	Fri, 19 Dec 2014 17:11:06 +0000
+app/controllers/application_controller.rb	Thu, 15 Jan 2015 01:30:09 +0000
+app/controllers/home_controller.rb	Tue, 13 Jan 2015 11:02:52 +0000
+app/controllers/members_controller.rb	Fri, 13 Feb 2015 19:23:06 +0000
+app/controllers/reports_controller.rb	Fri, 16 Jan 2015 18:30:54 +0000
+app/controllers/users/confirmations_controller.rb	Tue, 13 Jan 2015 12:28:22 +0000
+app/controllers/users/omniauth_callbacks_controller.rb	Tue, 13 Jan 2015 12:28:23 +0000
+app/controllers/users/passwords_controller.rb	Tue, 13 Jan 2015 12:28:22 +0000
+app/controllers/users/registrations_controller.rb	Tue, 13 Jan 2015 12:28:22 +0000
+app/controllers/users/sessions_controller.rb	Tue, 13 Jan 2015 12:28:23 +0000
+app/controllers/users/unlocks_controller.rb	Tue, 13 Jan 2015 12:28:23 +0000
+app/controllers/users_controller.rb	Tue, 20 Jan 2015 17:01:56 +0000
+app/helpers/application_helper.rb	Tue, 13 Jan 2015 11:16:53 +0000
+app/helpers/devise_helper.rb	Tue, 13 Jan 2015 11:19:02 +0000
+app/helpers/home_helper.rb	Thu, 08 Jan 2015 14:38:54 +0000
+app/helpers/members_helper.rb	Thu, 08 Jan 2015 14:43:09 +0000
+app/helpers/reports_helper.rb	Thu, 15 Jan 2015 20:10:49 +0000
+app/helpers/users_helper.rb	Wed, 14 Jan 2015 12:18:11 +0000
+app/models/member.rb	Fri, 13 Feb 2015 17:48:46 +0000
+app/models/user.rb	Tue, 20 Jan 2015 16:13:32 +0000
+app/pdfs/labels_pdf.rb	Fri, 16 Jan 2015 15:58:53 +0000
+app/pdfs/list_pdf.rb	Fri, 13 Feb 2015 18:11:00 +0000
