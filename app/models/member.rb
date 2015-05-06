@@ -6,7 +6,7 @@ class Member < ActiveRecord::Base
 
   validates :address, :length => { :in => 6..255 },	:allow_blank => true
   validates :age_group, :length => { :in => 1..20 }, :allow_blank => true
-  validates :email, :length => { :in => 5..255 }
+  validates :email, :length => { :in => 5..255 }, :allow_blank => true
   validates :first_name, :presence => true, :length => { :in => 1..20 }
   validates :home_telephone_number, :length => { :in => 1..14 }, :allow_blank => true
   validates :last_name, :presence => true

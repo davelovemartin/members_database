@@ -18,6 +18,8 @@ MembersDatabase::Application.routes.draw do
 
   match '/users/sign_up', :to => 'home#index'
 
+  get "documentation", :to => "doc#app"
+
   get "home/index"
 
   # The priority is based upon order of creation:
