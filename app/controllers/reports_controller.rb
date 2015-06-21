@@ -13,7 +13,9 @@ class ReportsController < ApplicationController
       "SixteenthSheet" => {
         "paper_size" => "A4",
         "columns"    => 2,
-        "rows"       => 8
+        "rows"       => 8,
+        "left_margin" => 21,
+        "column_gutter" => 51
     }}
 
     @members = Member.all(:order => 'last_name')
