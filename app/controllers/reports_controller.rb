@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
         "rows"       => 8,
         "left_margin" => 21,
         "top_margin" => 53,
-        "row_height" => 96,
+        "row_gutter" => 9,
         "column_gutter" => 51
     }}
 
