@@ -25,7 +25,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'attribute-defaults'
-gem 'mandrill-api'
+gem 'postmark-rails'
 gem 'prawn'
 gem "prawn-labels"
 # To use ActiveModel has_secure_password

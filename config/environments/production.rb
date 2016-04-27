@@ -68,12 +68,13 @@ MembersDatabase::Application.configure do
   config.action_mailer.default_url_options = { :host => 'vast-waters-8717.herokuapp.com' }
 
   ActionMailer::Base.smtp_settings = {
-    :port =>           '587',
-    :address =>        'smtp.mandrillapp.com',
-    :user_name =>      ENV['MANDRILL_USERNAME'],
-    :password =>       ENV['MANDRILL_APIKEY'],
-    :domain =>         'heroku.com',
-    :authentication => :plain
+    :port =>           '25',
+    :address =>        ENV['POSTMARK_SMTP_SERVER'],
+    :user_name =>      ENV['POSTMARK_API_TOKEN'],
+    :password =>       ENV['POSTMARK_API_TOKEN'],
+    :domain =>         'vast-waters-8717.heroku.com',
+    :authentication => :plain,
+    :enable_starttls_auto => false
   }
   ActionMailer::Base.delivery_method = :smtp
 

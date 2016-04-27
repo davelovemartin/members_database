@@ -62,5 +62,9 @@ module MembersDatabase
 
     # Devise: forcing your application to not access the DB or load models when precompiling your assets
     config.assets.initialize_on_precompile = false
+
+    # Send email with Postmark Rails
+    config.action_mailer.delivery_method = :postmark
+    config.action_mailer.postmark_settings = { :api_token => ENV['POSTMARK_API_TOKEN'] }
   end
 end
